@@ -1,0 +1,192 @@
+                            Java Programs
+1.How do we reverse tge String?
+Ans
+public class Reverse_String {
+	public static void main(String[] args) {
+
+		String str = "";
+		String rev = "";
+		Scanner Sc = new Scanner(System.in);
+
+		System.out.println("Enter String to reverse");
+		str = Sc.nextLine();
+
+		for (int i = str.length() - 1; i >= 0; i--) {
+			rev = rev + str.charAt(i);
+
+		}
+		System.out.print("reverse String is:" + rev);
+	}
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+2. Method Overriding Program 
+Ans-Acquiring Superclass Property to Sub Class And Changing implementation As per Sub Class Specification is called Method Overriding.
+
+ public class Father {        //Superclass
+	public void car(int a) {
+		System.out.println("Rolls royce");
+	}
+
+	public void Money() {
+		System.out.println("father has lot of bitcoins");
+	}
+
+	public void land() {
+		System.out.println("Fater has 100 acer of land");
+	}
+}
+
+    public class Son extends Father {     //Sub Class
+	public void car()
+	{
+		System.out.println("Maruti Suzuki");     //Override Property
+	}
+	public void land()
+	{
+		System.out.println("Now father has 200 acre of land");
+	}
+	public static void main(String[] args) {
+		Son r=new Son();
+		r.car();
+		
+		r.land();
+	}
+----------------------------------------------------------------------------------------------------------------------------------------------
+3.Method Overloading program changing the Arguments
+Ans- 
+  public class Method_Ovrloding {
+	public static void k1(int a,int b)
+    {
+		System.out.println("main method");
+	}
+	public static void k1(int q,float b)
+    {
+		System.out.println("sub method");
+	}
+	public static void main(String[] args) {
+		Method_Ovrloding.k1(12, 67);
+		Method_Ovrloding.k1(23, 23.3f);
+	}
+-----------------------------------------------------------------------------------------------------------------------------------------------	
+
+4.Write a program to generate the following output in java?
+*
+**
+****
+*****
+******
+Ans-
+public class Star_pat {
+	public static void main(String[] args) {
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println(" ");
+		}
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q5.How to remove special characters from a string in java?
+Ans-
+ public class RemoveChar {
+public static void main(String[] args) {
+String str = "Java Program#ming@nice";
+String alphabets = str.replaceAll("[0-9 $@,""]); //
+alphabets=alphabets.replace(" "," "); //space remove
+
+System.out.println(alphabets);
+System.out.println(Total no. of alpabets are: +
+alphabets.length());
+}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q6.How to sort array in java?
+Ans-
+public class SortArray
+{   
+public static void main(String[] args)   
+{   
+ int [] array = new int [] {90, 23, 5, 109, 12, 22, 67, 34};  
+ Arrays.sort(array);   
+ System.out.println("Elements of array sorted in ascending order: "); 
+}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q7. Program for Odd & Even number Checking.
+ans-								
+import java.util.Scanner;
+public class EvenOdd {
+
+    public static void main(String[] args) {
+
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = reader.nextInt();
+
+        if(num % 2 == 0)
+            System.out.println(num + " is even");
+        else
+            System.out.println(num + " is odd");
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Q8.Write a Java Program to find whether a string or number is palindrome or not.
+Ans-.class Main {
+  public static void main(String[] args) {
+
+    String str = "Abhishek",
+    reverseStr = "";
+    
+    int strLength = str.length();
+
+    for (int i = (strLength - 1); i >=0; --i) {
+      reverseStr = reverseStr + str.charAt(i);
+    }
+
+    if (str.toLowerCase().equals(reverseStr.toLowerCase())) {
+      System.out.println(str + " is a Palindrome String.");
+    }
+    else {
+      System.out.println(str + " is not a Palindrome String.");
+    }
+  }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q9.Write a Java Program for Fibonacci series.
+Ans- 
+ public class FibSeries{
+ public static void main(String[] args) {
+ int a = 0;
+ int b = 1;
+ int c;
+ System.out.println(a);
+ System.out.println(b);
+ for (int i = 0; i <= 20; i++) {
+ c = a + b;
+ System.out.println(c);
+ a = b;
+ b = c;
+ }
+ }
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q10.Print Multiplication table Program in java
+Ans-
+import java.util.Scanner;  
+public class TableExample  
+{  
+public static void main(String args[])   
+{  
+Scanner sc = new Scanner(System.in);  
+System.out.print("Enter number: ");       
+int num=sc.nextInt();  
+ 
+for(int i=1; i <= 10; i++)  
+{  
+System.out.println(num+" * "+i+" = "+num*i);  
+}  
+}  
+}  
+------------------------------------------------------------------------------------------------------------------------------------------------

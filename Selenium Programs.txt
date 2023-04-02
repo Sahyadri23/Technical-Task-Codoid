@@ -1,0 +1,90 @@
+                                                         *Selenium Programs*
+
+Q1.	Write code for Cross Browser Testing
+Ans-
+package crossBrowser;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import config.Configurations;
+public class Demo1 {
+@Test
+@Parameters("Browser")
+public void openBrowser(String browser) {
+System.out.println(browser);
+ if (browser.equalsIgnoreCase("firefox")) {
+   System.setProperty("webdriver.gecko.driver,"C:\\Users\\Abhishek\\Desktop\\Java Automation\\firefoxDriver\\geckodriver.exe");
+
+WebDriver driver = new FirefoxDriver();
+driver.get(Configurations.url);
+driver.manage().window().maximize();
+} 
+ else
+ {
+ System.setProperty("webdriver.chrome.driver","C:\\Users\\Abhish\\Desktop\\JavaAutomation\\chromedriver_win32chromedriver.exe");
+
+WebDriver driver = new ChromeDriver();
+driver.get(Configurations.url);
+driver.manage().window().maximize();
+}
+}
+}
+----------------------------------------------------------------------------------------------------------------------------------------------
+Q2.	Write code for handling Frames
+Ans-
+  import org.openqa.selenium.By;
+ import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class I_FRAME {
+	
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium setup\\Extracted filed driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst");
+		//driver.switchTo().frame("iframeResult");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[contains(text(),'Click me')]")).click();
+		}
+       }
+---------------------------------------------------------------------------------------------------------------------------------------------
+Q3.Write code for taking Screenshot
+Ans
+package Automatiom_Setup;
+
+import java.io.File;
+import java.io.IOException;
+import java.sql.Time;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
+
+public class Screenshot {
+	public static void main(String[] args) throws IOException, InterruptedException {
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium setup\\Extracted filed driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.google.com");
+		Thread.sleep(2000);
+
+		driver.manage().window().maximize();
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		Date d = new Date();
+		String str = d.toString();
+		str = str.replace(" ", "_");
+		str = str.replace(":", "_");
+
+		File dest = new File("C:\\Users\\ABHISHEK\\Documents\\Screenshots\\image_" + str + ".jpeg");
+		FileHandler.copy(src, dest);
+
+	}
+}
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+

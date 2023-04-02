@@ -1,0 +1,53 @@
+Manual Testing Ques:
+1.	Write a bug report for a bug in the login page that the submit button is not working.
+Ans- For Above Scenario bug report As Follows:
+      1.Defect ID: D_AppXYZ_Module1_001
+      2.Defect TiTle:- In Login Page Submit button is Not Working
+      3.Steps To reproduce: 1 Open the Login Page
+                            2.Enter The Email id and password
+                            3.Click on Submit Button 
+      4.Expected result : Click on Submit Button,Button Should be Clickable
+      5.Actual result: Submit Button not clickable
+      6.Visual Proof of Bug: Attached Scrrenshot of page
+      7.Severity: High
+      8.Priority : High
+                           
+
+2.	Write a bug report for any scenario of your own in WhatsApp
+Ans- Scenario:  While Creating new Community Setting Profile pic Camera Icon Not Working
+        1.Defect ID: D_Whtsap_Module1_002
+      2.Defect TiTle:- While Creating new Community Setting Profile pic Camera Icon Not Working
+      3.Steps To reproduce: 1 Open the WhatsApp
+                            2.Click on  New community
+                            3.Click on Camera Button
+      4.Expected result : Click on Camera Icon the browsing option should be open like Gallery ,camera
+      5.Actual result: Camera Button Not Working
+      6.Visual Proof Of bug: Scrrenshot attached
+      7.Severity: Medium
+      8.Priority : Medium
+
+3.Write any 5 Negative test cases
+Ans- For ATM Machine
+    1.Verify the functionality by entering a wrong pin number, user can proceed .
+    2.Validate Withdrawl Functionality entring the amount like -20,-4.5
+    3.Verify the cash withdrawal functionality by entering an amount greater than the total available balance in the account.
+    4.Validate the Functionality inserting the Expired Card
+    5.Withdraw The Amount more than expected limit
+
+4.Write a few test cases for the IRCTC Web Application.
+Ans - 1.verify the Application should Not take more time to load
+      2.All the Tabs and link are present as per requirement (sanity testing)
+      3.Application Should Support Diffrent browsers(Browser Compatibility test)
+      4.Application Should Dispaly Error Msg if Wrong data is enter(Error-handling Cov)
+      5.data process from frontend Should be savesd at coorect location in backend(Backend Coverage)
+      6.Application Should Be capable to sahring the data with other Application(Inter-system testing)
+      7.Application Should available in different language(Globalisation testing)
+      
+5.Create  test cases for spicejet application
+Ans- 1.verify the Spicejet logo is present at correct location with size 
+     2.Verify all the tabs are present at top and Clicable
+     3.Verify the all the links present at bottomside Should be working
+     4.Diffrent buttons like Explore now ,Book now are clicable and redirect to perticular page
+     5.verify the user is able to navigate from one page to another page
+
+
