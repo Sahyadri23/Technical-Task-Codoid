@@ -1,5 +1,5 @@
                             Java Programs
-1.How do we reverse tge String?
+1.How do we reverse the String?
 Ans
 public class Reverse_String {
 	public static void main(String[] args) {
